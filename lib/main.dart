@@ -16,18 +16,33 @@ class AdvBasics extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 54, 33, 243),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/quiz-logo.png'),
+              Image.asset(
+                'assets/images/quiz-logo.png',
+                width: 250,
+              ),
               SizedBox(
                 height: 30,
               ),
               Text(
                 'Learn Flutter the fun way!',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(
                 height: 30,
               ),
-              OutlinedButton(onPressed: () {}, child: Text('Start Quiz')),
+              OutlinedButton(
+                onPressed: () {},
+                child: Text('Start Quiz'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  side: BorderSide(color: Colors.white, width: 2),
+                ),
+              ),
             ],
           ),
         ),
